@@ -23,7 +23,3 @@ var app = angular.module('jsdataWorkshop', ['js-data', 'ui.router'])
     // }
 
   })
-  
-
-
-

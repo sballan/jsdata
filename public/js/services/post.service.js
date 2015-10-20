@@ -3,13 +3,12 @@
 app.factory('Post', function(DS,$state) {
 
 	var Post = DS.defineResource({
-		name:'post',
+		name:'posts',
 		relations: {
 			belongsTo: {
-				user: {
-					localField: 'user',
-					localKey: 'userId',
-					parent: true
+				users: {
+					localField: '_author',
+					localKey: 'author'
 				}
 			}
 		},
@@ -23,15 +22,12 @@ app.factory('Post', function(DS,$state) {
 
 
 	/*
-
 		TODOS:
 		1) create a js-data Post resource that establishes a relationship
 		between posts and users
-
 		2) add a methods object to the resource
 				a) add a `go` method that takes each post to the individual post page
 				(HINT: see post.js)
-
 	*/
 	return Post;
 });
