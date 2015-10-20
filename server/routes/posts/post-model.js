@@ -4,15 +4,15 @@ var mongoose = require('mongoose');
 
 var schema = new mongoose.Schema({
 	title: {
-		type:String, 
+		type:String,
 		required: true
 	},
 	body: {
-		type: String, 
+		type: String,
 		required: true
 	},
 	date: {
-		type: Date, 
+		type: Date,
 		default: Date.now
 	},
 	author: {

@@ -31,7 +31,6 @@ app.use(passport.session());
 app.use(flash());
 
 
-
 app.use('/api/posts', require('./routes/posts'))
 app.use('/api/users', require('./routes/users'))
 
@@ -47,4 +46,3 @@ app.get('/*', function(req, res) {
 app.use(function(err, req, res, next) {
 	res.status(err.status).send(err.message)
 });
-
